@@ -67,7 +67,7 @@ Using the structure-based **AHN hypothesis** (Hydrophobic `H3`, Hydrogen Bond Ac
 
 * **Screening Criteria:** Compounds were required to match at least **2 out of the 3** core pharmacophoric features ($\ge 66.7\%$ feature match) while entirely avoiding the receptor's steric exclusion volumes.
 * **Result:** **2,419 compounds** successfully cleared the pharmacophore screen and were isolated as the finalized candidate library for advanced molecular docking simulations.
-![Structure-Based AHN Pharmacophore Hypothesis](Images/Pharmacophore%20picture.jpg)
+![Structure-Based AHN Pharmacophore Hypothesis](Images/Pharmacophore_picture.jpg)
 
  ---
 
