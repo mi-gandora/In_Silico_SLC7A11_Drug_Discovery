@@ -60,7 +60,7 @@ The resulting hypothesis identified a **3-feature pharmacophore model (AHN)** de
 * **Hydrogen Bond Acceptor (A4):** Maps out essential hydrogen-accepting alignments near coordinating residues (Score: -1.00 kcal/mol).
 * **Negative Ionic Feature (N15):** Captures favorable electrostatic interactions with positively charged side chains inside the transporter channel (Score: -0.30 kcal/mol).
 
-* **Exclusion Volumes:** As visualized in ![Pharmacophore Hypothesis](Images/Pharmacophore_picture.jpg)`, a stringent shell of exclusion spheres (teal volumes) was incorporated based on the receptor's steric boundaries to ensure that screened hits match the spatial contours of the pocket without causing steric clashes.
+* **Exclusion Volumes:** As visualized in ![Pharmacophore Hypothesis](Images/Pharmacophore picture.jpg)`, a stringent shell of exclusion spheres (teal volumes) was incorporated based on the receptor's steric boundaries to ensure that screened hits match the spatial contours of the pocket without causing steric clashes.
 
 ### 5: Pharmacophore-Based Virtual Screening (Schrödinger Phase)
 Using the structure-based **AHN hypothesis** (Hydrophobic `H3`, Hydrogen Bond Acceptor `A4`, and Negative Ionic `N15`) generated from the receptor-ligand complex, the 2,665 drug-like compounds were subjected to a database screen. 
