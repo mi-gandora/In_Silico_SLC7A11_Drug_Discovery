@@ -67,6 +67,44 @@ Using the structure-based **AHN hypothesis** (Hydrophobic `H3`, Hydrogen Bond Ac
 
 * **Screening Criteria:** Compounds were required to match at least **2 out of the 3** core pharmacophoric features ($\ge 66.7\%$ feature match) while entirely avoiding the receptor's steric exclusion volumes.
 * **Result:** **2,419 compounds** successfully cleared the pharmacophore screen and were isolated as the finalized candidate library for advanced molecular docking simulations.
+
+  ### 6. Receptor Grid Generation (Schrödinger Glide)
+Before initiating molecular docking simulations, the structural boundaries of the SLC7A11 binding cavity were explicitly mapped out using **Schrödinger Glide Receptor Grid Generation** to ensure targeted ligand placement.
+
+The grid generation parameters were defined according to the native pocket environment:
+* **Active Site Definition:** The reference bound ligand within the cryo-EM structure was selected to automatically center the binding coordinates and exclude it from the final grid volume.
+* **Grid Center Coordinates:** The centroid of the binding pocket was locked at the following exact Cartesian coordinates: 
+  $$\mathbf{X: 127.06, \quad Y: 125.07, \quad Z: 122.21}$$
+* **Box Dimensions:** The enclosing box size was dynamically configured to accommodate incoming screening ligands matching or similar in size to the reference native workspace ligand.
+* **Van der Waals Scaling:** Receptor nonpolar atoms were scaled with a factor of `1.0` and a partial charge cutoff of `0.25` to permit standard rigid-receptor structural boundaries during the docking process.
+
+  ### 7. High-Throughput Virtual Screening Cascade (Schrödinger Glide)
+To identify potential lead compounds with high binding affinity for the SLC7A11 pocket, a hierarchical virtual screening cascade was performed using **Schrödinger Glide**. 
+
+As a rigorous scientific control framework, **5 standard reference drugs** (Erastin, Sorafenib, Imidazole Ketone Erastin, HG-106, and Sulfasalazine) along with the co-crystallized control ligand (**PX-8**) were prepared via LigPrep and screened simultaneously alongside the main compound library.
+
+#### Phase A: High-Throughput Virtual Screening (HTVS)
+* **Input Library:** 2,419 pharmacophore-matched hits + 6 control reference standards (Total: 2,425 entries selected in the Project Table).
+* **Precision Mode:** HTVS (High-Throughput Virtual Screening).
+* **Settings Configuration:**
+  * **Ligand Sampling:** `Flexible` mode enabled to explore conformational space.
+  * **Inversions/Conformations:** Checked `Sample nitrogen inversions` and `Sample ring conformations`.
+  * **Torsional Sampling:** Biased sampling set for `All predefined functional groups`.
+  * **Scoring Penalty:** Checked `Add Epik state penalties to docking score` to incorporate ionization energy costs.
+  * **Van der Waals Scaling:** Scaled at a factor of `0.80` with a partial charge cutoff of `0.15` to accommodate ligand fit.
+
+#### Phase B: Standard Precision (SP) & Extra Precision (XP) Refining
+Following HTVS, the screening pipeline was systematically compressed to maximize accuracy:
+1. **Glide SP Docking:** Executed on the top-performing **100 compounds** from the HTVS run, keeping all 6 reference standards embedded in the cohort.
+2. **Glide XP Docking:** Run back-to-back on the same top-scoring cohort to capture highly precise structural interactions, water elimination configurations, and stringent electrostatic filtering within the active site.
+
+### 8. Binding Free Energy Estimation (Schrödinger Prime MM-GBSA)
+To calculate thermodynamic binding affinities and eliminate false positives from the rigid-receptor docking grid, the top **30 scoring compounds** from the XP run—alongside the 6 reference control standards—were subjected to MM-GBSA rescoring using **Schrödinger Prime**.
+
+* **Input Setup:** Complexes were derived from separated ligand and protein structures, pulling ligands directly from selected entries in the Project Table and the receptor from the active Workspace entry.
+* **Solvation Model:** **VSGB** (Variable Surface Generalized Born) model.
+* **Force Field:** **OPLS4**.
+* **Protein Flexibility:** Fixed distance from ligand set to `0.0 Å` with a `Minimize` sampling method to perform local energy minimization on the bound ligand within the rigid binding site.
  ---
 
 ## 🚀 Project Roadmap & Current Progress
@@ -74,7 +112,8 @@ Using the structure-based **AHN hypothesis** (Hydrophobic `H3`, Hydrogen Bond Ac
 - [x] Source Library Import & LigPrep (5,089 Compounds Restructured)
 - [x] Drug-Likeness Filtering via QikProp Lipinski RO5 (2,665 Leads Remaining)
 - [x] Structure-Based AHN Pharmacophore Modeling & Database Screen (2,419 Hits Isolated)
-- [ ] Virtual Screening Cascade (Glide HTVS $\rightarrow$ SP $\rightarrow$ XP Docking)
-- [ ] Binding Free Energy Estimation via Prime MM-GBSA
+- [x] Receptor Grid Generation & Pocket Coordinate Mapping (X:127.06, Y:125.07, Z:122.21)
+- [x] Hierarchical Virtual Screening Cascade (Glide HTVS $\rightarrow$ SP $\rightarrow$ XP Docking)
+- [x] Binding Free Energy Estimation via Prime MM-GBSA (Top 30 + 6 Standards)
 - [ ] Advanced Toxicity & Pharmacokinetic Profiling via ADMETlab 2.0 (BBB, DILI, etc.)
 - [ ] Structural Refinement & Rational Lead Optimization via ChemDraw Professional
