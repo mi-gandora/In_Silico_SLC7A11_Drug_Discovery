@@ -206,9 +206,9 @@ The predictive QSAR layer successfully highlighted critical safety differentiato
 ## 🛠️ 11. Rational Lead Optimization & R-Group Substitution
 To maximize therapeutic efficacy and structural interactions within the active binding site of SLC7A11, the top two small-molecule candidates (**Compound 29629** and **Compound 25904**) were advanced to a rational lead optimization phase. Visual inspection of their bound conformations inside the receptor cavity revealed exposed, non-interacting hydroxyl groups ($\text{-OH}$). 
 
-[cite_start]To exploit these positions, a library of **20 structurally diverse functional group substituents** was systematically introduced at the hydroxyl site using **ChemDraw Professional** [cite: 2, 3][cite_start], generating the **L1** (derived from Compound 29629) and **L2** (derived from Compound 25904) analogue series[cite: 2, 3].
+To exploit these positions, a library of **20 structurally diverse functional group substituents** was systematically introduced at the hydroxyl site using **ChemDraw Professional**, generating the **L1** (derived from Compound 29629) and **L2** (derived from Compound 25904) analogue series.
 
-* [cite_start]**Evaluation Pipeline:** All 40 engineered analogues were re-subjected to Extra Precision (XP) molecular docking, Prime MM-GBSA thermodynamic rescoring, and downstream ADMET lab 2.0 safety profiling[cite: 2, 3, 4, 5].
+* **Evaluation Pipeline:** All 40 engineered analogues were re-subjected to Extra Precision (XP) molecular docking, Prime MM-GBSA thermodynamic rescoring, and downstream ADMET lab 2.0 safety profiling.
 * **Final Selection:** Based on a rigorous multi-parameter optimization trade-off, three finalized derivatives—**L1_OCH2CH2OH**, **L1_OCH3**, and **L2_OCH2CH2OH**—were isolated as the ultimate optimized leads for this study.
 
 <details>
@@ -217,25 +217,29 @@ To maximize therapeutic efficacy and structural interactions within the active b
 The 40 specialized analogues were benchmarked using a stringent matrix balance prioritizing high thermodynamic stability (MM-GBSA) without compromising critical pharmacological safety baselines:
 
 1. **L1_OCH2CH2OH (Lead 1 2-hydroxyethoxy derivative):**
-   * [cite_start]*Thermodynamic Affinity:* Demonstrated a highly robust binding profile with an XP Docking score of `-8.471 kcal/mol` and an exceptionally favorable Prime MM-GBSA free energy value of `-59.83 kcal/mol`[cite: 5].
-   * [cite_start]*Safety Matrix:* Exhibited a remarkably safe profile with zero blood-brain barrier penetration risk (BBB: 0), minimal cardiotoxicity (hERG inhibition: 0.424), and an extremely low hepatotoxicity probability (DILI score: 0.110)[cite: 2].
+   * **Thermodynamic Affinity:** Demonstrated a highly robust binding profile with an XP Docking score of `-8.471 kcal/mol` and an exceptionally favorable Prime MM-GBSA free energy value of `-59.83 kcal/mol`.
+   * **Safety Matrix:** Exhibited a remarkably safe profile with zero blood-brain barrier penetration risk (BBB: 0), minimal cardiotoxicity (hERG inhibition: 0.424), and an extremely low hepatotoxicity probability (DILI score: 0.110).
 
 2. **L1_OCH3 / L1_OMe (Lead 1 methoxy derivative):**
-   * [cite_start]*Thermodynamic Affinity:* Achieved well-balanced energetics including an XP Docking score of `-8.359 kcal/mol` and a stable MM-GBSA value of `-51.24 kcal/mol`[cite: 5].
-   * [cite_start]*Safety Matrix:* Remained clear of central nervous system side effects (BBB: 0) while maintaining a safe liver profile (DILI score: 0.121)[cite: 2].
+   * **Thermodynamic Affinity:** Achieved well-balanced energetics including an XP Docking score of `-8.359 kcal/mol` and a stable MM-GBSA value of `-51.24 kcal/mol`.
+   * **Safety Matrix:** Remained clear of central nervous system side effects (BBB: 0) while maintaining a safe liver profile (DILI score: 0.121).
 
 3. **L2_OCH2CH2OH (Lead 2 2-hydroxyethoxy derivative):**
-   * *Thermodynamic Affinity:* Unlocked significantly enhanced binding stability over its parent compound, achieving an XP Docking score of `-8.170 kcal/mol` paired with a phenomenal MM-GBSA binding free energy of `-61.53 kcal/mol`[cite: 4].
-   * [cite_start]*Safety Matrix:* Showcased a highly balanced clearance rate ($t_{1/2}$: 1.330) and an exceptional cardiac safety margin with an extremely low predicted hERG channel inhibition risk (0.210)[cite: 3].
+   * **Thermodynamic Affinity:** Unlocked significantly enhanced binding stability over its parent compound, achieving an XP Docking score of `-8.170 kcal/mol` paired with a phenomenal MM-GBSA binding free energy of `-61.53 kcal/mol`.
+   * **Safety Matrix:** Showcased a highly balanced clearance rate ($t_{1/2}$: 1.330) and an exceptional cardiac safety margin with an extremely low predicted hERG channel inhibition risk (0.210).
 </details>
 
 ### 📊 Optimized Analogue Dataset Reference
 > 📂 **Data Availability Note:** The complete tracking sheets containing XP docking scores, Prime MM-GBSA binding values, and the complete 16-parameter ADMETlab 2.0 evaluation profiles across all 40 generated L1 and L2 functional group variations are organized as separate data sheets.
 > 
 > 👉 **View the optimization data here:**
-> * [**`XP_Docking_and_MMGBSA_Analogs_Profiles.xlsx`**](./Data/)
-> * [**`ADMET_Analysis_of_Optimized_Analogs.xlsx`**](./Data/)
+> * [**`XP DOCKING AND MMGBSA OF COMPD 25904 ANALOGS.docx`**](./Data/XP%20DOCKING%20AND%20MMGBSA%20OF%20COMPD%2025904%20ANALOGS)
+> * [**`XP DOCKING AND MMGBSA OF COMPD 29629 ANALOGS.docx`**](./Data/XP%20DOCKING%20AND%20MMGBSA%20OF%20COMPD%2029629%20ANALOGS)
+> * [**`ADMET ANALYSIS OF COMPOUND 25904 ANALOGS.docx`**](./Data/ADMET%20ANALYSIS%20OF%20COMPOUND%2025904%20ANALOGS)
+> * [**`ADMET ANALYSIS OF COMPOUND 29629 ANALOGS.docx`**](./Data/ADMET%20ANALYSIS%20OF%20COMPOUND%2029629%20ANALOGS)
 
+
+---
 ---
 
 ***
@@ -249,4 +253,5 @@ The 40 specialized analogues were benchmarked using a stringent matrix balance p
 - [x] Hierarchical Virtual Screening Cascade (Glide HTVS $\rightarrow$ SP $\rightarrow$ XP Docking)
 - [x] Binding Free Energy Estimation via Prime MM-GBSA (Top 30 + 6 Standards)
 - [x] Advanced Toxicity & Pharmacokinetic Profiling via ADMETlab 2.0 (Top 10 + 6 Standards)
-- [ ] Structural Refinement & Rational Lead Optimization via ChemDraw Professional
+- [x] Structural Refinement & Rational Lead Optimization via ChemDraw Professional
+- [x] Bioisosteric R-Group Substitution & Selection of Ultimate Optimized Leads
