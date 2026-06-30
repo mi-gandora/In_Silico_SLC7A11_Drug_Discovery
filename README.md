@@ -206,15 +206,23 @@ The predictive QSAR layer successfully highlighted critical safety differentiato
 ## 🛠️ 11. Rational Lead Optimization & R-Group Substitution
 To maximize therapeutic efficacy and structural interactions within the active binding site of SLC7A11, the top two small-molecule candidates (**Compound 29629** and **Compound 25904**) were advanced to a rational lead optimization phase. Visual inspection of their bound conformations inside the receptor cavity revealed exposed, non-interacting hydroxyl groups ($\text{-OH}$). 
 
-To exploit these positions, a library of **20 structurally diverse functional group substituents** was systematically introduced at the hydroxyl site using **ChemDraw Professional**, generating the **L1** (derived from Compound 29629) and **L2** (derived from Compound 25904) analogue series.
+### 🔍 Structural Rationale (Parent Compounds)
+To document the structural starting points, the 3D binding poses and corresponding 2D ligand interaction diagrams were generated to map out pocket topology:
+
+| Candidate Compound | 3D Binding Pose | 2D Interaction Diagram |
+| :--- | :--- | :--- |
+| **Compound 29629** | ![Compound 29629 3D Binding Pose](Images/3D_interaction_29629.png) | ![Compound 29629 2D Interaction](Images/2D_interaction_29629.png) |
+| **Compound 25904** | ![Compound 25904 3D Binding Pose](Images/3D_interaction_25904.png) | ![Compound 25904 2D Interaction](Images/2D_interaction_25904.png) |
+
+To exploit these positions, a library of **20 structurally diverse functional group substituents** was systematically introduced at the hydroxyl site using **ChemDraw Professional**, generating the **L1** (derived from Compound 29629) and **L2** (derived from Compound 25904) analog series.
 
 * **Evaluation Pipeline:** All 40 engineered analogues were re-subjected to Extra Precision (XP) molecular docking, Prime MM-GBSA thermodynamic rescoring, and downstream ADMET lab 2.0 safety profiling.
 * **Final Selection:** Based on a rigorous multi-parameter optimization trade-off, three finalized derivatives—**L1_OCH2CH2OH**, **L1_OCH3**, and **L2_OCH2CH2OH**—were isolated as the ultimate optimized leads for this study.
 
 <details>
-<summary>⚙️ View Analogue Selection Parameters & Screening Data</summary>
+<summary>⚙️ View Analog Selection Parameters & Screening Data</summary>
 
-The 40 specialized analogues were benchmarked using a stringent matrix balance prioritizing high thermodynamic stability (MM-GBSA) without compromising critical pharmacological safety baselines:
+The 40 specialized analogs were benchmarked using a stringent matrix balance prioritizing high thermodynamic stability (MM-GBSA) without compromising critical pharmacological safety baselines:
 
 1. **L1_OCH2CH2OH (Lead 1 2-hydroxyethoxy derivative):**
    * **Thermodynamic Affinity:** Demonstrated a highly robust binding profile with an XP Docking score of `-8.471 kcal/mol` and an exceptionally favorable Prime MM-GBSA free energy value of `-59.83 kcal/mol`.
@@ -229,7 +237,7 @@ The 40 specialized analogues were benchmarked using a stringent matrix balance p
    * **Safety Matrix:** Showcased a highly balanced clearance rate ($t_{1/2}$: 1.330) and an exceptional cardiac safety margin with an extremely low predicted hERG channel inhibition risk (0.210).
 </details>
 
-### 📊 Optimized Analogue Dataset Reference
+### 📊 Optimized Analog Dataset Reference
 > 📂 **Data Availability Note:** The complete tracking sheets containing XP docking scores, Prime MM-GBSA binding values, and the complete 16-parameter ADMETlab 2.0 evaluation profiles across all 40 generated L1 and L2 functional group variations are organized as separate data sheets.
 > 
 > 👉 **View the optimization data here:**
