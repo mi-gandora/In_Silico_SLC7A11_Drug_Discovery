@@ -246,6 +246,11 @@ The 40 specialized analogs were benchmarked using a stringent matrix balance pri
 > * [**`ADMET ANALYSIS OF COMPOUND 25904 ANALOGS.docx`**](./Data/ADMET%20ANALYSIS%20OF%20COMPOUND%2025904%20ANALOGS)
 > * [**`ADMET ANALYSIS OF COMPOUND 29629 ANALOGS.docx`**](./Data/ADMET%20ANALYSIS%20OF%20COMPOUND%2029629%20ANALOGS)
 
+> 📊 **Final Lead Documentation:** The comprehensive multi-parameter docking scores, Prime MM-GBSA thermodynamic profiles, and complete 16-parameter ADMETlab 2.0 evaluation metrics comparing your final selected leads against the clinical benchmarking standards are fully detailed in the dedicated summary documents:
+> * 👉 [**Download Final Selected Leads Docking & MM-GBSA Report**](./Data/Docking%20and%20MMGBSA%20of%20Final%20Selected%20Compounds%20and%20Standards.docx)
+> * 👉 [**Download Final Selected Leads ADMET Analysis Report**](./Data/ADMET%20ANALYSIS%20OF%20FINAL%20SELECTED%20COMPOUNDS%20AND%20STANDARDS.docx)
+> * 👉 [**Download Final Selected Leads Drug-Likeness Prediction Report**](./Data/Drug-Likeness%20Prediction%20Of%20Final%20Selected%20Compounds%20and%20Standards.docx)
+
 
 ---
 ---
